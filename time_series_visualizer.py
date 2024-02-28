@@ -42,8 +42,8 @@ def draw_bar_plot():
     sns.set_palette("Paired")
     # Draw bar plot
     ax = sns.barplot(data=df_bar, x='year', y='value', hue='month', hue_order=hue_order)
-    ax.set(xlabel='Years', ylabel='Average Page Views', title='some title')
-    
+    ax.set(xlabel='Years', ylabel='Average Page Views')
+    plt.legend(title='Months', loc="upper left")
 
     # Save image and return fig (don't change this part)
     fig.savefig('bar_plot.png')
